@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="18" time="184.373">
+    <testcase classname="Verify Add to Cart" name="Add products to the cart" time="15.784">
+        <system-out><![CDATA[Given browser is open And user done login...................................passed
+When user clicks on add to cart.............................................passed
+Then products add to the cart...............................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Verify Add to Cart" name="Remove products from cart" time="11.839">
+        <system-out><![CDATA[Given browser is open And user done login...................................passed
+When user clicks on add to cart.............................................passed
+And user clicks on remove...................................................passed
+Then products remove from cart..............................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Verify Add to Cart" name="Checking count of cart when prducts are added" time="8.262">
+        <system-out><![CDATA[Given browser is open And user done login...................................passed
+When user clicks on add to cart.............................................passed
+Then count of cart incresed.................................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Verify Add to Cart" name="Checking count of cart when prducts are removed" time="11.77">
+        <system-out><![CDATA[Given browser is open And user done login...................................passed
+When user clicks on add to cart.............................................passed
+When user clicks on remove..................................................passed
+Then count of cart decreased................................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Verify Add to Cart" name="Checking add to cart button" time="9.909">
+        <system-out><![CDATA[Given browser is open And user done login...................................passed
+When user clicks on add to cart.............................................passed
+Then user is on your cart page..............................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="login functionality test" name="Check login with valid credentials" time="10.023">
+        <system-out><![CDATA[Given browser is open.......................................................passed
+When user enters valid standard_user and secret_sauce.......................passed
+And clicks on login button..................................................passed
+Then user is navigated to the home page.....................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="login functionality test" name="Check login with valid credentials 2" time="15.391">
+        <system-out><![CDATA[Given browser is open.......................................................passed
+When user enters valid performance_glitch_user and secret_sauce.............passed
+And clicks on login button..................................................passed
+Then user is navigated to the home page.....................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="login functionality test" name="Check login with valid credentials 3" time="9.236">
+        <system-out><![CDATA[Given browser is open.......................................................passed
+When user enters valid problem_user and secret_sauce........................passed
+And clicks on login button..................................................passed
+Then user is navigated to the home page.....................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="login functionality test" name="Check login with invalid credentials" time="7.6">
+        <system-out><![CDATA[Given browser is open.......................................................passed
+When user enters invalid roshani1 and roshani123............................passed
+And clicks on login button..................................................passed
+Then user get a message "invalid credentials"...............................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Overview page testing" name="Verify cancel button" time="10.36">
+        <system-out><![CDATA[Given user done login And user is on overview page..........................passed
+When user click on cancel button............................................passed
+Then products page is displayed.............................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Overview page testing" name="Verify finish button" time="9.386">
+        <system-out><![CDATA[Given user done login And user is on overview page..........................passed
+When user click on finish button............................................passed
+Then checkout complete page is displayed....................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Overview page testing" name="Verify back home button" time="8.583">
+        <system-out><![CDATA[Given user done login And user is on overview page..........................passed
+When user click on back home button.........................................passed
+Then products page is displayed.............................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Your cart page testing" name="Verify checkout" time="5.124">
+        <system-out><![CDATA[Given user done login And user is on your cart page.........................passed
+When user click on checkout.................................................passed
+Then your information page is displayed.....................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Your cart page testing" name="product details are displayed" time="4.223">
+        <system-out><![CDATA[Given user done login And user is on your cart page.........................passed
+When user click on products.................................................passed
+Then product details page is display........................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Your cart page testing" name="Remove product from cart" time="6.546">
+        <system-out><![CDATA[Given user done login And user is on your cart page.........................passed
+When user click on remove...................................................passed
+Then product remove from cart...............................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Your information page testing" name="Continue process with valid values" time="14.189">
+        <system-out><![CDATA[Given user done login And user is on your information page..................passed
+When user enters roshani and borase and 123456..............................passed
+And click on continue button................................................passed
+Then next page is displayed.................................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Your information page testing" name="FirstName, LastName contains only alphabets and Zipcode contains only numbers" time="10.118">
+        <failure message="Process continue with invalid values" type="junit.framework.AssertionFailedError"><![CDATA[Given user done login And user is on your information page..................passed
+When user enters rosh123 and bor757 and fgsd123 as alphanumeric values......passed
+And click on continue button................................................passed
+Then message is display "Please enter valid details"........................failed
+
+StackTrace:
+junit.framework.AssertionFailedError: Process continue with invalid values
+	at junit.framework.Assert.fail(Assert.java:57)
+	at junit.framework.Assert.assertTrue(Assert.java:22)
+	at StepDefinition.YourInformation.message_is_display(YourInformation.java:69)
+	at ✽.message is display "Please enter valid details"(file:///C:/Users/lenovo/Desktop/study%20material/selenium%20practice/SauceDemoExcelr/./src/test/resources/Feature/yourInfoPage.feature:17)
+]]></failure>
+    </testcase>
+    <testcase classname="Your information page testing" name="Values not pass to the mandatory feild" time="14.641">
+        <system-out><![CDATA[Given user done login And user is on your information page..................passed
+And user did not enter values...............................................passed
+And click on continue button................................................passed
+Then display message "feild is reqired".....................................passed
+]]></system-out>
+    </testcase>
+</testsuite>
