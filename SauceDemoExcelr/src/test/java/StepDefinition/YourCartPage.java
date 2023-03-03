@@ -45,20 +45,20 @@ public class YourCartPage {
 		driver.close();
 	}
 
-	/*@When("user click on continue shopping")
+	@When("user click on continue shopping")
 	public void user_click_on_continue_shopping() {
 		driver.findElement(By.id("continue-shopping")).click();
 	}
 
 	@Then("products page is display")
-	public void products_page_is_display() {*/
-		/*String expectedText="Products";
+	public void products_page_is_display() {
+		String expectedText="Products";
 		String actualText=driver.findElement(By.xpath("//span[@class='title'] ")).getText();
 		    
 		Assert.assertTrue("Page is not displayed", expectedText.equals(actualText));
-		driver.close();*/
-		//System.out.println("");
-	//}
+		driver.close();
+		System.out.println("");
+	}
 
 	@When("user click on products")
 	public void user_click_on_products() {
