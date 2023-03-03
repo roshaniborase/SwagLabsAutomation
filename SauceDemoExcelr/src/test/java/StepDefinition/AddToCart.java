@@ -74,13 +74,13 @@ WebDriver driver;
 
 	@Then("user is on your cart page")
 	public void user_is_on_your_cart_page() {
-		/*String expectedText="Your Cart";
+		String expectedText="Your Cart";
 	    String actualText=driver.findElement(By.xpath("//span[@class='title']")).getText();
 	    
 	    Assert.assertTrue("User is not on ' your cart page '", expectedText.equals(actualText));
 	      
-	    driver.close();*/
-		System.out.println("");
+	    driver.close();
+		
 	}
 
 
